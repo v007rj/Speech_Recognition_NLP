@@ -8,8 +8,7 @@ import speech_recognition as sr
 from os import path
 
 AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "english.wav")
-# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "french.aiff")
-# AUDIO_FILE = path.join(path.dirname(path.realpath(__file__)), "chinese.flac")
+
 
 # use the audio file as the audio source
 r = sr.Recognizer()
@@ -78,8 +77,8 @@ except sr.RequestError as e:
     print("Could not request results from Houndify service; {0}".format(e))
 
 # recognize speech using IBM Speech to Text
-IBM_USERNAME = "INSERT IBM SPEECH TO TEXT USERNAME HERE"  # IBM Speech to Text usernames are strings of the form XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
-IBM_PASSWORD = "INSERT IBM SPEECH TO TEXT PASSWORD HERE"  # IBM Speech to Text passwords are mixed-case alphanumeric strings
+IBM_USERNAME = "INSERT  SPEECH TO TEXT USERNAME HERE"  # IBM Speech to Text usernames are strings of the form XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+IBM_PASSWORD = "INSERT  SPEECH TO TEXT PASSWORD HERE"  # IBM Speech to Text passwords are mixed-case alphanumeric strings
 try:
     print("IBM Speech to Text results:")
     pprint(r.recognize_ibm(audio, username=IBM_USERNAME, password=IBM_PASSWORD, show_all=True))  # pretty-print the recognition result
