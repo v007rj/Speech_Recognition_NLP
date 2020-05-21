@@ -1,6 +1,4 @@
-#!/usr/bin/env python3
 
-# NOTE: this example requires PyAudio because it uses the Microphone class
 
 import speech_recognition as sr
 
